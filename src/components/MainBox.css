@@ -1,0 +1,159 @@
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    & h1 {
+        width: 100%;
+        margin-bottom: 10px;
+        filter: drop-shadow(-1px 1px 8px #000);
+    }
+
+    &  hr {
+        width: 100%;
+        margin-bottom: 10px;
+        opacity: 0.3;
+    }
+
+    & .box {
+        width: 300px;
+        border: 2px solid var(--color_1);
+        padding: 10px;
+        border-radius: var(--bow);
+        box-shadow: var(--shadow);
+
+        & h3 {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.sec-1 {
+    margin: 1rem 0;
+
+    & .box {
+        max-width: 350px;
+        border: 2px solid var(--color_1);
+        padding: 10px;
+        margin: auto;
+        border-radius: var(--bow);
+        box-shadow: var(--shadow);
+
+        & h2 {
+            margin-bottom: 12px;
+        }
+
+        & b {
+            background-color: var(--color_1);
+            padding: 6px 2rem;
+            border-radius: var(--bow);
+            animation-name: lightning;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+    }
+
+    & .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 14rem);
+        justify-content: space-evenly;
+        margin: 1rem 0;
+        direction: rtl;
+
+        .card {
+            width: 100%;
+            border: 2px solid var(--color_1);
+            padding: 10px;
+            border-radius: var(--bow);
+            box-shadow: var(--shadow);
+        
+            & img {
+                width: 100%;
+            }
+
+            & hr {
+                margin-bottom: 10px;
+                opacity: 0.3;
+            }
+
+            & h3 {
+                background-color: var(--color_1);
+                padding: 6px 0;
+                border-radius: var(--bow);
+            }
+        }
+    }
+}
+
+.sec-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+
+    & select {
+        position: relative;
+        appearance: none;
+        width: 90px;
+        height: 30px;
+        background-color: var(--color_2);
+        padding: 5px;
+        color: var(--fontColor);
+        direction: rtl;
+        border: 2px solid var(--color_1);
+        font-weight: bold;
+        outline: none;
+        box-shadow: var(--shadow);
+        cursor: pointer;
+    }
+    & select:hover + .compass {
+        animation-name: rotation;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        animation-direction: alternate;
+    }
+
+    & .compass {
+        width: 50px;
+        filter: drop-shadow(-1px 1px 8px #000);
+    }
+}
+
+footer {
+    
+    & img {
+        width: 60Px;
+        filter: drop-shadow(-1px 1px 8px #000);
+    }
+
+    & a {
+        color: var(--color_4);
+    }
+}
+
+@keyframes lightning {
+    from{
+        background-color: var(--color_2);
+    }
+}
+
+@keyframes rotation {
+    from{
+        transform: rotate(320deg);
+    }
+    to{
+        transform: rotate(-320deg);
+    }
+}
+
+@media (max-width: 768px) {
+    header div {
+        margin-bottom: 10px;
+    }
+
+    .cards {
+        direction: ltr;
+    }
+}

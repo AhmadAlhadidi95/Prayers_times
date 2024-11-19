@@ -1,0 +1,38 @@
+:root {
+    --color_1: #492100;
+    --color_2: #945200;
+    --color_3: #e19800;
+    --color_4: #ffe200;
+    --color_5: #fffd7c;
+    --fontColor: #ffffe5;
+    --bow: 6px;
+    --shadow: -2px 1px 10px -1px rgba(0,0,0,0.75);
+    --smooth: 0.3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+body {
+    background-image: linear-gradient(40deg, var(--color_1), var(--color_2), var(--color_1));
+    font-family: Tahoma;
+    color: var(--fontColor);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--color_1);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--color_2);
+    border-radius: var(--bow);
+}
+
+.container {
+    padding: 1rem;
+    text-align: center;
+}
